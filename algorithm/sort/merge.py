@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # !/usr/bin/env python3
-# from ..tool import decorate_sort
-from algorithm.tool import decorate_sort
+from ..tool import decorate_sort
 
 
 def __merge_sort(nums, lo=None, hi=None):
