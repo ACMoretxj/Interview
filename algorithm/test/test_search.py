@@ -1,14 +1,14 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import unittest
-from algorithm.search import bisearch
+from algorithm.search import bisearch, BSTree
 from bisect import bisect
+from random import randint, shuffle
 
 
 class TestSearch(unittest.TestCase):
 
     def setUp(self):
-        from random import randint
         self.cases = [([], 0),
                       ([1, 2, 3, 4, 5], 1),
                       ([1, 2, 3, 4, 5], 5),
@@ -28,6 +28,17 @@ class TestSearch(unittest.TestCase):
                     flag = False
                     break
             elif i2 != -1:
+                flag = False
+                break
+        self.assertTrue(flag)
+
+    def test_binary_search_tree(self):
+        flag = True
+        for case in self.cases:
+            nums, e = case[0][:], case[1]
+            shuffle(nums)
+            bst = BSTree(nums)
+            if bst.find(e) != (e in nums):
                 flag = False
                 break
         self.assertTrue(flag)
