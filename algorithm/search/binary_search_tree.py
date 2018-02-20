@@ -7,7 +7,6 @@ from algorithm.tree import BTree
 class BSTree:
 
     def __init__(self, nums):
-        print(nums)
         self.nums = nums[:]
         self.root = None
         for n in self.nums:

@@ -43,6 +43,9 @@ class TestSearch(unittest.TestCase):
                 break
         self.assertTrue(flag)
 
+    def test_avl_tree(self):
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
